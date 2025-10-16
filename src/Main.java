@@ -50,7 +50,6 @@ public class Main {
             }
         } while (escolha != 7);
     }
-
 //==================================================================\\ CLIENTES
 
     public static void menuClientes() {
