@@ -1,2 +1,3 @@
-public class RelatorioGeravel {
+public interface RelatorioGeravel {
+    String gerarResumo();
 }

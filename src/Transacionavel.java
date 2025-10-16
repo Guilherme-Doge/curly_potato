@@ -1,5 +1,5 @@
 public interface Transacionavel {
-    public void processarPagamento();
+    boolean processarPagamento(Pagamento p) throws ReservaException;
 
-    public void estornar();
+    boolean estornar(Pagamento p) throws ReservaException;
 }

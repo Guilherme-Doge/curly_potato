@@ -10,6 +10,6 @@ public enum RiscoParadoxo {
     }
 
     public String getRiscoParadoxo() {
-        return riscoParadoxo;
+        return this.riscoParadoxo;
     }
 }
