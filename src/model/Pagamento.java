@@ -1,5 +1,7 @@
 package model;
 
+import Exceptions.ValidacaoException;
+
 public abstract class Pagamento {
     protected double valor;
 

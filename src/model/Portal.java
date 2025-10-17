@@ -90,15 +90,19 @@ public class Portal {
     public void verificarDisponibilidade() {
 
     }
+
     public void ocuparAssento(Reserva r) {
 
     }
+
     public void liberarAssento(Reserva r) {
 
     }
+
     public void adicionarListaEspera(Reserva r) {
 
     }
+
     public void calcularOcupacao() {
 
     }

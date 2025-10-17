@@ -1,5 +1,7 @@
 package model;
 
+import Exceptions.ValidacaoException;
+
 public class PagamentoCartao extends Pagamento {
     private String numeroCartao;
     private String nomeTitular;

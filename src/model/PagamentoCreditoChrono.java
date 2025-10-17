@@ -1,5 +1,7 @@
 package model;
 
+import Exceptions.ValidacaoException;
+
 public class PagamentoCreditoChrono extends Pagamento {
     private String idCliente;
     private double saldoDisponivel;
