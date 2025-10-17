@@ -1,3 +1,5 @@
+package model;
+
 public enum StatusReserva {
     PENDENTE("Pendente"),
     CONFIRMADA("Confirmada"),

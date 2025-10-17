@@ -7,7 +7,6 @@ public class Main {
     public static Gerenciamento GERENCIAMENTO = new Gerenciamento();
     public static void main(String[] args) {
         int escolha = 0;
-
         do {
             try {
                 System.out.println("1 - Gerenciar Clientes\n2 - Gerenciar Agências/Agentes\n3 - Gerenciar Portais\n4 - Gerenciar Reservas\n5 - Relatórios\n6 - Logs de Transações\n7 - Sair");

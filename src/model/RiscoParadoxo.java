@@ -1,3 +1,5 @@
+package model;
+
 public enum RiscoParadoxo {
     LOW("Low"),
     MEDIUM("Medium"),

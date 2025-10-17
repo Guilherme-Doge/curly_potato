@@ -8,6 +8,13 @@ public abstract class Pessoa {
     private String email;
     private LocalDate dataNascimento;
 
+    public Pessoa(String nome, String documentoID, String email, LocalDate dataNascimento) {
+        this.nome = nome;
+        this.documentoID = documentoID;
+        this.email = email;
+        this.dataNascimento = dataNascimento;
+    }
+
     public String getNome() {
         return this.nome;
     }

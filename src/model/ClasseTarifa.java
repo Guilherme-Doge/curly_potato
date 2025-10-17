@@ -1,3 +1,5 @@
+package model;
+
 public enum ClasseTarifa {
     ECONOMY("Economy"),
     BUSINESS("Business"),

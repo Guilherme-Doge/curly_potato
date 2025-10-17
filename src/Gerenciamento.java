@@ -1,4 +1,6 @@
 import model.Pessoa;
+import model.Portal;
+import model.Reserva;
 
 import java.util.ArrayList;
 import java.util.HashMap;
