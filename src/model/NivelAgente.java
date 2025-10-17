@@ -1,3 +1,5 @@
+package model;
+
 public enum NivelAgente {
     JUNIOR("Júnior"),
     SENIOR("Sênior"),
