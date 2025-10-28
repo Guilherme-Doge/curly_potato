@@ -16,7 +16,7 @@ public class Cliente extends Pessoa {
         this.pontosTempo = builder.pontosTempo;
         this.pontuacaoParadoxo = builder.pontuacaoParadoxo;
         this.bloqueado = builder.bloqueado;
-        this.reservas = builder.reservas != null ? builder.reservas : new ArrayList<>();
+        this.reservas = new ArrayList<>();
     }
 
     public int getPontosTempo() {
@@ -68,8 +68,8 @@ public class Cliente extends Pessoa {
         this.pontosTempo += pontos;
     }
 
-    public void acumularPontos(double valor) {
-        this.pontosTempo += (int) (valor * 0.1);
+    public void acumularPontos(int valor) {
+        this.pontosTempo += valor * 0.1;
     }
 
     public void atualizarPontuacaoParadoxo(int valor) {
@@ -124,11 +124,6 @@ public class Cliente extends Pessoa {
 
         public Builder bloqueado(boolean bloqueado) {
             this.bloqueado = bloqueado;
-            return this;
-        }
-
-        public Builder reservas(List<Reserva> reservas) {
-            this.reservas = reservas;
             return this;
         }
 

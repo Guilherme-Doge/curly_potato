@@ -20,7 +20,7 @@ public class Validador {
 
     }
 
-    public void validarCampoNaoVazio(String valor) {
-
+    public boolean validarCampoNaoVazio(String valor) {
+        return (valor.isBlank())? false : true;
     }
 }

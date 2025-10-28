@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDate;
 
 public class Reserva implements Transacionavel, RelatorioGeravel {
+    private RelatorioGeravel gerarResumo;
     private String id;
     private Cliente cliente;
     private Portal portal;
@@ -25,6 +26,7 @@ public class Reserva implements Transacionavel, RelatorioGeravel {
         this.itinerario = builder.itinerario;
         this.seguroContratado = builder.seguroContratado;
         this.riscoParadoxo = builder.riscoParadoxo;
+        this.gerarResumo = () -> null;
     }
 
     public String getId() {
@@ -106,32 +108,42 @@ public class Reserva implements Transacionavel, RelatorioGeravel {
     public void setRiscoParadoxo(RiscoParadoxo riscoParadoxo) {
         this.riscoParadoxo = riscoParadoxo;
     }
+
     public void calcularTarifa() {
 
     }
+
     public void confirmar() {
 
     }
+
     public void cancelar() {
 
     }
+
     public void alterar(LocalDate novaData) {
 
     }
+
     public void adicionarBagagem() {
 
     }
+
     public void adicionarBagagem(double peso) {
 
     }
+
+    @Override
     public boolean processarPagamento(Pagamento p) {
         return false;
     }
 
+    @Override
     public boolean estornar(Pagamento p) {
         return true;
     }
 
+    @Override
     public String gerarResumo() {
         return null;
     }

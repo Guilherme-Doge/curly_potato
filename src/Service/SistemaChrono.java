@@ -1,33 +1,91 @@
 package Service;
 
-import model.Cliente;
-import model.Agente;
-import model.Portal;
-import model.Agencia;
-import model.Reserva;
+import model.*;
 
-import java.util.Map;
-import java.util.List;
+import java.util.*;
 
 public class SistemaChrono {
-    private Map<String, Cliente> clientes;
-    private Map<String, Agente> agentes;
-    private Map<String, Portal> portais;
-    private Map<String, Agencia> agencias;
-    private List<Reserva> todasReservas;
-    private List<String> logs;
+    private static Map<String, Cliente> clientes = new HashMap<>();
+    private static Map<String, Agente> agentes = new HashMap<>();
+    private static Map<String, Portal> portais = new HashMap<>();
+    private static Map<String, Agencia> agencias = new HashMap<>();
+    private static List<Reserva> todasReservas = new ArrayList<>();
+    private static List<String> logs = new ArrayList<>();
+    private static Scanner SC = new Scanner(System.in);
+    private static int escolha = 0;
 
 
     public static void main(String args[]) {
-
+        menuPrincipal();
+        System.out.println("Encerrando atividades...");
     }
 
     public static void menuPrincipal() {
-
+        while (escolha != 8) {
+            try {
+                escolha = SC.nextInt();
+                switch (escolha) {
+                    case 1 : {
+                        menuClientes();
+                        break;
+                    }
+                    case 2 : {
+                        menuAgencias();
+                        break;
+                    }
+                    case 3 : {
+                        menuAgentes();
+                        break;
+                    }
+                    case 4 : {
+                        menuPortais();
+                        break;
+                    }
+                    case 5 : {
+                        menuReservas();
+                        break;
+                    }
+                    case 6 : {
+                        menuRelatorios();
+                        break;
+                    }
+                    case 7 : {
+                        menuLogs();
+                        break;
+                    }
+                    case 8 : {
+                        return;
+                    }
+                    default : {
+                        System.out.println("Opção inválida");
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Algo deu errado. Tente novamente");
+            }
+        }
     }
 
     public static void menuClientes() {
-
+        while (escolha != 5) {
+            try {
+                System.out.println("""
+                        1 - Criar Cliente
+                        2 - Listar Clientes
+                        3 - Editar Clientes
+                        4 - Excluir Clientes
+                        5 - Sair
+                        """);
+                escolha = SC.nextInt();
+                switch (escolha) {
+                    case 1 : {
+                        ClienteService.criarCliente();
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Algo deu errado");
+            }
+        }
     }
 
     public static void menuAgencias() {

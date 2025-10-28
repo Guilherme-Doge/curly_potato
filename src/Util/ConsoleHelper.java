@@ -1,31 +1,34 @@
 package Util;
 
+import java.util.Scanner;
+
 public class ConsoleHelper {
-    public void lerString(String mensagem) {
+    private static Scanner SC = new Scanner(System.in);
+    public static String lerString() {
+        return SC.nextLine();
+    }
+
+    public static void lerInt() {
 
     }
 
-    public void lerInt(String mensagem) {
+    public static void lerDouble() {
 
     }
 
-    public void lerDouble(String mensagem) {
+    public static void lerData() {
 
     }
 
-    public void lerData(String mensagem) {
+    public static void confirmarAcao() {
 
     }
 
-    public void confirmarAcao(String mensagem) {
+    public static void pausar() {
 
     }
 
-    public void pausar() {
-
-    }
-
-    public void limparTela() {
+    public static void limparTela() {
 
     }
 }
